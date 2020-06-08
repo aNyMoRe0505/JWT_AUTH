@@ -148,7 +148,7 @@ router.post('/refreshToken', async (ctx) => {
       token: refreshToken,
     },
     include: [{
-      model: db.models.Member,
+      model: db.models.User,
       required: true,
     }],
   });
@@ -160,7 +160,7 @@ router.post('/refreshToken', async (ctx) => {
     // 需不需要重給 refreshToken ? 如果給
     // 優點：可能token被竊取 但使用者剛好權限過期 用此 API 換 token, 原本被偷的 token 就無效
     // 缺點：使用者ㄧ定要30天都沒打request才會登出, 不然的話使用者永遠不會登出, 不給的話30天後 refreshToken 失效, 使用者一定得重登
-    const accessToken = await checkTokenExist.Member.accessToken(checkTokenExist.Member.role);
+    const accessToken = await checkTokenExist.User.accessToken(checkTokenExist.User.role);
     ctx.body = {
       accessToken,
     };
