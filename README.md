@@ -1,5 +1,5 @@
 # JWT_AUTH
-JWT based oAuth practice
+JWT based auth practice
 
 ## API
 ### GET /auth/authRequiredEndpoint
