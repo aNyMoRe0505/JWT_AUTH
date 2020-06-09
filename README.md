@@ -1,4 +1,4 @@
-# oAuth
+# JWT_AUTH
 JWT based oAuth practice
 
 ## API
