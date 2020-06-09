@@ -1,5 +1,5 @@
 # JWT_AUTH
-JWT based auth practice
+JWT based auth practice https://anymore0505.github.io/official-site/blog/article/9
 
 ## API
 ### GET /auth/authRequiredEndpoint
@@ -71,7 +71,7 @@ header 帶 authorization `Bearer accessToken`
 帶 body json
 ```
 {
-	"originalPwd": "originalPwd",
+  "originalPwd": "originalPwd",
   "newPwd": "newPwd"
 }
 
