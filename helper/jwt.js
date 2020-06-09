@@ -1,10 +1,10 @@
 import jwt from 'jsonwebtoken';
 
-export const JWT_TOKEN_SECRET = 'AUTH_PRACTICE_ACCESSTOKEN';
-export const JWT_REFRESH_TOKEN_SECRET = 'AUTH_PRACTICE_REFRESHTOKEN';
+const JWT_TOKEN_SECRET = 'AUTH_PRACTICE_ACCESSTOKEN';
+const JWT_REFRESH_TOKEN_SECRET = 'AUTH_PRACTICE_REFRESHTOKEN';
 
-export const TOKEN_EXPIRED_SECONDS = 60 * 15; // 15 minutes
-export const REFRESH_TOKEN_EXPIRED_SECONDS = 60 * 60 * 24 * 30; // 30 days
+const TOKEN_EXPIRED_SECONDS = 60 * 15; // 15 minutes
+const REFRESH_TOKEN_EXPIRED_SECONDS = 60 * 60 * 24 * 30; // 30 days
 
 export function verifyToken(token) {
   return new Promise((resolve, reject) => {
